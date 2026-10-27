@@ -1,0 +1,5 @@
+{"id":"fw-0001","ts":1790000000000,"src_ip":"203.0.113.50","dst_ip":"10.0.0.5","dst_port":443,"proto":"TCP","action":"ALLOW","rule_id":"r1","bytes":5120}
+{"id":"fw-0002","ts":1790000001000,"src_ip":"203.0.113.51","dst_ip":"10.0.0.5","dst_port":22,"proto":"TCP","action":"DENY","rule_id":"r7"}
+{"id":"fw-0003","ts":1790000002000,"src_ip":"192.168.1.20","dst_ip":"10.0.0.9","dst_port":53,"proto":"udp","action":"DENY","rule_id":"r3"}
+{"id":"fw-0004","ts":1790000003000,"src_ip":"203.0.113.52","dst_ip":"10.0.0.5","dst_port":"3389","proto":"TCP","action":"DENY"}
+{"id":"fw-0005","ts":1790000004000,"src_ip":"203.0.113.53","dst_ip":"10.0.0.5","dst_port":3389,"proto":"TCP","action":"DENY","rule_id":"r9"}

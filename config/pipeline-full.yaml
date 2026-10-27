@@ -1,0 +1,60 @@
+# Long-running service: HTTP ingestion + generator, PostgreSQL + file sinks.
+# Requires: docker compose up -d   and   export SECSTREAM_PG_PASSWORD=...   (see .env.example)
+# Optional: export SECSTREAM_HTTP_TOKEN=... and uncomment authTokenEnv.
+pipeline:
+  workers: 4
+  queueCapacity: 20000
+  shutdownTimeout: 30s
+
+processing:
+  minSeverity: LOW
+
+sources:
+  - name: http
+    type: http
+    host: 127.0.0.1
+    port: 8080
+    maxBodyBytes: 1048576
+    maxEventsPerRequest: 1000
+    threads: 4
+    admissionTimeout: 200ms
+    # authTokenEnv: SECSTREAM_HTTP_TOKEN
+  - name: generator
+    type: generator
+    count: 50000
+    ratePerSecond: 2000
+    firewallFraction: 0.5
+    failureFraction: 0.2
+    duplicateFraction: 0.02
+    malformedFraction: 0.01
+    seed: 7
+
+sinks:
+  - name: db
+    type: postgres
+    url: jdbc:postgresql://localhost:5432/secstream
+    user: secstream
+    passwordEnv: SECSTREAM_PG_PASSWORD
+    statementTimeout: 5s
+    delivery:
+      queueCapacity: 20000
+      batchSize: 500
+      retry: {maxAttempts: 8, initialBackoff: 200ms, maxBackoff: 10s, multiplier: 2.0}
+  - name: alerts
+    type: file
+    path: out/alerts.jsonl
+
+routes:
+  - name: alerts
+    minSeverity: HIGH
+    sinks: [alerts]
+  - name: store-all
+    sinks: [db]
+
+deadLetter:
+  path: out/dead-letter.jsonl
+  fsync: true
+
+metrics:
+  port: 9090
+  logInterval: 10s

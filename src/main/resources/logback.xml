@@ -1,0 +1,14 @@
+<configuration>
+  <!-- Logs go to stderr so stdout carries only console-sink event output. -->
+  <appender name="STDERR" class="ch.qos.logback.core.ConsoleAppender">
+    <target>System.err</target>
+    <encoder>
+      <!-- logfmt-style: message plus SLF4J key-value pairs, easy to grep and to ship as structured data. -->
+      <pattern>ts=%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX,UTC} level=%level thread=%thread logger=%logger{0} msg="%msg" %kvp{DOUBLE}%n%ex</pattern>
+    </encoder>
+  </appender>
+  <logger name="org.flywaydb" level="WARN"/>
+  <root level="${SECSTREAM_LOG_LEVEL:-INFO}">
+    <appender-ref ref="STDERR"/>
+  </root>
+</configuration>

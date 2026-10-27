@@ -1,0 +1,9 @@
+{"eventId":"si-0001","timestamp":"2026-10-01T09:00:00Z","userId":"alice","ip":"198.51.100.10","country":"IN","result":"SUCCESS","app":"mail","deviceId":"dev-1"}
+{"eventId":"si-0002","timestamp":"2026-10-01T09:00:05Z","userId":"bob","ip":"203.0.113.7","country":"US","result":"FAILURE","app":"vpn","deviceId":"dev-2","failureReason":"BAD_PASSWORD"}
+{"eventId":"si-0003","timestamp":"2026-10-01T09:00:09Z","userId":"bob","ip":"203.0.113.7","country":"US","result":"FAILURE","app":"vpn","deviceId":"dev-2","failureReason":"ACCOUNT_LOCKED"}
+{"eventId":"si-0002","timestamp":"2026-10-01T09:00:05Z","userId":"bob","ip":"203.0.113.7","country":"US","result":"FAILURE","app":"vpn","deviceId":"dev-2","failureReason":"BAD_PASSWORD"}
+{"timestamp":"2026-10-01T09:01:00Z","userId":"carol","ip":"10.1.2.3","result":"SUCCESS","app":"portal"}
+{"timestamp":"not-a-timestamp","userId":"mallory","ip":"198.51.100.66","result":"SUCCESS","app":"portal"}
+{"eventId":"si-0007","timestamp":"2026-10-01T09:02:00Z","userId":"dave","ip":"localhost","result":"FAILURE","app":"hr"}
+
+{"eventId":"si-0008","timestamp":"2026-10-01T09:03:00Z","userId":"erin","ip":"2001:db8::1","country":"DE","result":"FAILURE","app":"billing","failureReason":"MFA_DENIED"}

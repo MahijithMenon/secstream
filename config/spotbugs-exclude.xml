@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+  <!--
+    EI_EXPOSE_REP / EI_EXPOSE_REP2: records and value types in this codebase defensively copy
+    collections with List.copyOf / Map.copyOf, which SpotBugs cannot see through. Components
+    that hold collaborators (sinks, metrics, queues) intentionally share references.
+  -->
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/>
+  </Match>
+  <!-- Constructors validate arguments and throw; there is no finalizer attack surface here. -->
+  <Match>
+    <Bug pattern="CT_CONSTRUCTOR_THROW"/>
+  </Match>
+</FindBugsFilter>
