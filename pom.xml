@@ -16,7 +16,7 @@
     <!-- Fixed timestamp makes the jar byte-for-byte reproducible. -->
     <project.build.outputTimestamp>2026-10-27T00:00:00Z</project.build.outputTimestamp>
 
-    <jackson.version>2.22.4</jackson.version>
+    <jackson.version>2.23.0</jackson.version>
     <postgresql.version>42.7.14</postgresql.version>
     <flyway.version>13.11.1</flyway.version>
     <slf4j.version>2.0.20</slf4j.version>
