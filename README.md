@@ -15,7 +15,7 @@ HttpSource ─┘  (block / 503)      │  (bounded)  │   │ normalize │   
                                                     └───────────┘
 ```
 
-Details: [architecture](docs/architecture/ARCHITECTURE.md) · [ADRs](docs/architecture/adr/) · [metrics](docs/METRICS.md) · [benchmarks](docs/BENCHMARKS.md) · [interview guide](docs/INTERVIEW_GUIDE.md) · [status](docs/PROJECT_STATUS.md)
+Details: [architecture](docs/architecture/ARCHITECTURE.md) · [ADRs](docs/architecture/adr/) · [metrics](docs/METRICS.md) · [benchmarks](docs/BENCHMARKS.md) · [design deep dive](docs/DESIGN_DEEP_DIVE.md) · [status](docs/PROJECT_STATUS.md)
 
 ## Prerequisites
 
