@@ -22,7 +22,7 @@ Last updated: 2026-10-27 (session 1).
 | 6 | PostgreSQL (Flyway, batching) + HTTP source | done | `PostgresSinkIT` (4, real PostgreSQL 18 via Testcontainers), `PostgresSinkClassificationTest` (10), `HttpEventSourceTest` (5) |
 | 7 | YAML config, structured logs, metrics endpoint | done | `ConfigLoaderTest` (7), `MetricsTest` (4) |
 | 8 | High-volume correctness + benchmarks | done | `PipelineStressTest` (200k default, 1M verified), `docs/BENCHMARKS.md` |
-| 9 | README, ADRs, interview guide | done (first version) | `README.md`, `docs/` |
+| 9 | README, ADRs, design deep dive | done (first version) | `README.md`, `docs/` |
 
 ## Verification log (session 1)
 
