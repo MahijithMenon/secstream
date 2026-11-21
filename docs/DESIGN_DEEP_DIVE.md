@@ -1,4 +1,4 @@
-# SecStream interview guide
+# SecStream design deep dive
 
 Every section describes what the code actually does, with file and test references. Things that are *not* implemented are labelled **Not implemented**.
 
