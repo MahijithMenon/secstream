@@ -3,7 +3,7 @@
 Entry point for any Claude Code session. Detailed status: `docs/PROJECT_STATUS.md`. Design: `docs/architecture/ARCHITECTURE.md` and `docs/architecture/adr/`.
 
 ## Purpose
-Multithreaded security-event ingestion pipeline in Java 21, built as an interview-grade portfolio project (Microsoft-style backend interviews). Goal is defensible engineering: explicit guarantees, tested concurrency, measured performance. The owner must be able to explain every line — prefer simple, explicit code over clever code.
+Multithreaded security-event ingestion pipeline in Java 21, built as a production-grade portfolio project. Goal is defensible engineering: explicit guarantees, tested concurrency, measured performance. The owner must be able to explain every line — prefer simple, explicit code over clever code.
 
 ## Build & tooling
 - Java 21 (`release 21`, enforcer `[21,22)`), Maven 3.9+. No wrapper yet.
